@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Los Colores</title>
+</head>
+<body>
+    <header>
+        <h1>Los Colores</h1>
+    </header>
+    
+    <nav>
+        <a onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a onclick="mostrarSeccion('teoria')">Teoría del Color</a>
+        <a onclick="mostrarSeccion('psicologia')">Psicología del Color</a>
+        <a onclick="mostrarSeccion('modelos')">RGB, CMYK y HEXADECIMAL</a>
+    </nav>
+
+    <div class="contenedor">
+        <section id="inicio" class="activo">
+            <h2>Bienvenidos a la Página de los Colores</h2>
+            <p>Explora el fascinante mundo de los colores y su impacto en el diseño y la percepción humana.</p>
+            <img src="IMAGENES/1.jpg" alt="Imagen 1" width="500">
+        </section>
+
+        <section id="teoria">
+            <h2>Teoría del Color</h2>
+            <p>La <strong>teoría del color</strong> es un conjunto de principios que explican cómo se forman, combinan y perciben los colores...</p>
+            <img src="IMAGENES/2.jpg" width="300">
+            <p><strong>¿Qué es el color?</strong> El color es una percepción visual...</p>
+            <img src="IMAGENES/3.jpg" width="500">
+            <img src="IMAGENES/4.jpg" width="500">
+            <img src="IMAGENES/5.png" width="500">
+
+            <ul>
+                <li><strong>Colores primarios:</strong> Rojo, azul y amarillo.</li>
+                <img src="IMAGENES/6.jpg" width="500">
+                <img src="IMAGENES/7.jpg" width="500">
+                <li><strong>Colores secundarios:</strong> Verde, morado y naranja.</li>
+                <img src="IMAGENES/8.jpg" width="500">
+                <li><strong>Colores terciarios:</strong> Mezclas de primarios y secundarios.</li>
+                <img src="IMAGENES/9.png" width="500">
+            </ul>
+
+            <h3>Propiedades del Color</h3>
+            <ul>
+                <li><strong>Tono</strong>: nombre del color.</li>
+                <li><strong>Saturación</strong>: intensidad.</li>
+                <li><strong>Brillo</strong>: claridad u oscuridad.</li>
+            </ul>
+            <img src="IMAGENES/10.jpg" width="500">
+
+            <h3>Armonía del Color</h3>
+            <ul>
+                <li>Complementarios</li>
+                <li>Análogos</li>
+                <li>Tríada</li>
+                <li>Monocromáticos</li>
+            </ul>
+            <img src="IMAGENES/11.jpg" width="500">
+
+            <h3>Síntesis del Color</h3>
+            <ul>
+                <li><strong>RGB</strong> (luz) → blanco.</li>
+                <li><strong>CMYK</strong> (tinta) → negro.</li>
+            </ul>
+            <img src="IMAGENES/12.jpg" width="500">
+        </section>
+
+        <section id="psicologia">
+            <h2>Psicología del Color</h2>
+            <h3>¿Cómo Influye?</h3>
+            <ul>
+                <li>Cálidos → energía</li>
+                <img src="IMAGENES/13.png" width="500">
+                <li>Fríos → calma</li>
+                <img src="IMAGENES/14.jpg" width="500">
+                <li>Neutros → elegancia</li>
+                <img src="IMAGENES/15.jpg" width="500">
+            </ul>
+
+            <h3>Significado de los colores</h3>
+            <ul>
+                <li>Rojo</li>
+                <img src="IMAGENES/16.jpg" width="500">
+                <img src="IMAGENES/17.jpg" width="500">
+                <li>Azul</li>
+                <img src="IMAGENES/18.png" width="500">
+                <img src="IMAGENES/19.jpg" width="500">
+                <li>Amarillo</li>
+                <img src="IMAGENES/20.jpg" width="500">
+                <img src="IMAGENES/21.jpg" width="500">
+                <li>Verde</li>
+                <img src="IMAGENES/22.png" width="500">
+                <img src="IMAGENES/23.jpg" width="500">
+                <li>Naranja</li>
+                <img src="IMAGENES/24.png" width="500">
+                <img src="IMAGENES/25.jpg" width="500">
+                <li>Morado</li>
+                <img src="IMAGENES/30.jpg" width="500">
+                <img src="IMAGENES/31.jpg" width="500">
+            </ul>
+        </section>
+
+        <section id="modelos">
+            <h3>RGB</h3>
+            <img src="IMAGENES/26.jpg" width="500">
+
+            <h3>CMYK</h3>
+            <img src="IMAGENES/cmyk.png" width="500">
+
+            <h3>HEX</h3>
+            <img src="IMAGENES/27.png" width="500">
+
+            <h3>Diferencias</h3>
+            <table>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Uso</th>
+                    <th>Mezcla</th>
+                    <th>Rango</th>
+                </tr>
+                <tr>
+                    <td>RGB</td>
+                    <td>Pantallas</td>
+                    <td>Luz</td>
+                    <td>0-255</td>
+                </tr>
+                <tr>
+                    <td>CMYK</td>
+                    <td>Impresión</td>
+                    <td>Tinta</td>
+                    <td>0%-100%</td>
+                </tr>
+                <tr>
+                    <td>HEX</td>
+                    <td>Web</td>
+                    <td>RGB</td>
+                    <td>#RRGGBB</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            document.querySelectorAll('section').forEach(seccion => {
+                seccion.classList.remove('activo');
+            });
+            document.getElementById(id).classList.add('activo');
+        }
+    </script>
+</body>
+</html>
